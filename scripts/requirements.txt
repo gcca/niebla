@@ -1,0 +1,5 @@
+Django>=1.7.7
+unittest2>=1.0.1
+pep8>=1.6.2
+pylint>=1.4.3
+django-test-pep8>=0.1
