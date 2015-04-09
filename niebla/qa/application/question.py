@@ -1,14 +1,25 @@
-def ask():
-    return NotImplemented
+"""Answer use cases.
+
+.. todo:: Restrict the number of questions returned.
+
+"""
+from qa.models import Question
 
 
-def vote_up():
-    return NotImplemented
+def ask(question):
+    question.save()
 
 
-def vote_down():
-    return NotImplemented
+def vote_up(question):
+    question.up_votes += 1
+    question.save()
 
 
-def comment():
-    return NotImplemented
+def vote_down(question):
+    question.down_votes += 1
+    question.save()
+
+
+def comment(question, comment):
+    # comment.question = question
+    comment.save()
